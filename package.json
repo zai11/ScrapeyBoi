@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "express": "^4.18.0",
     "fs": "^0.0.1-security",
     "puppeteer": "^13.6.0"
+  },
+  "engines": {
+    "node": "17.x"
   }
 }
