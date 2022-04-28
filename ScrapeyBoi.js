@@ -7,7 +7,7 @@ const compressor = require('compressing');
 
 exports.scrape = async function(address, callback) {
     const filename = crypto.createHash('md5').update(address).digest('hex');
-    const browser = await puppeteer.launch({});
+    const browser = await puppeteer.launch({args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
     await page.goto("https://" + address);
