@@ -83,11 +83,7 @@ function compressFile(filename, callback) {
 
 function decompressFile(filename, callback) {
     compressor.gzip.uncompress('./pages/' + filename + '.zip', './pages/' + filename + '.txt')
-    .then(() => { 
-        /*fs.unlink('./pages/' + filename + '.zip', (err) => {
-            if (err !== null)
-                console.log("WARNING: Couldn't delete file './pages/" + filename + ".zip'.");
-        });*/
+    .then(() => {
         callback(undefined);
     })
     .catch((error) => { 
