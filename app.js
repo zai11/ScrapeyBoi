@@ -17,6 +17,6 @@ app.get('/fetch/:hash', function(req, res) {
         res.json(result)
     });
 });
-app.listen(4000, function () {
+app.listen(process.env.PORT || 4000, function () {
   console.log('Example app listening on port 4000!');
 });
